@@ -1,0 +1,12 @@
+This code implements an audio processing pipeline for Singing Voice Conversion (SVC) using the 'so-vits-svc-fork' framework. I uploaded my voice in wav format and it performs source separation to extract vocals and instrumental components. The code then prepares the audio dataset by segmenting it based on silence detection, ensuring efficient training. Automatic preprocessing steps, including resampling, configuration setup, and pitch detection, enhance compatibility with the SVC framework. The model training process is monitored using 'tensorboard' for visualization. During inference, the code applies the trained model to modify vocal quality, adjusting pitch as desired. Finally, the modified vocals are combined with instrumentals to produce the converted audio output. This code requires Python and libraries such as 'pydub,' 'yt_dlp,' 'ffmpeg,' 'demucs,' and 'so-vits-svc-fork.' It is organized into sections, each catering to a specific step in the SVC process.
+     This code utilizes a set of essential supporting files to facilitate the singing voice conversion process. Firstly, pre-trained SVC (Singing Voice Conversion) model checkpoints are employed to modify vocal characteristics and perform pitch adjustments during inference. Additionally, audio file is being uploaded to the collab content or we can download the voice of the user in youtube if available, serving as the input data for the conversion. Configuration files drive the automatic preprocessing steps, including resampling and setup.Model training logs and visualizations are generated for monitoring using 'tensorboard.' The final output audio, combining modified vocals and instrumentals, is exported as FinalCover.wav.
+
+Config.json=contains various configuration settings used in the Singing Voice Conversion (SVC) model. This configuration file defines parameters for training, data preprocessing, model architecture, and other crucial aspects of the conversion process.
+
+G_799th.pth=The file "G_799.pth" is a checkpoint file containing the parameters and weights of a neural network model.This file represents a pre-trained generator model used for Singing Voice Conversion (SVC). The "G" in the file name typically refers to the generator component of a Generative Adversarial Network (GAN) or a similar model architecture.
+
+Finalcover.wav=This is the final output obtained after combining vocals and the instrumental voice.
+
+input_data.wav=This is the input data(my voice in wav format).
+
+song_downloaded_from_utube.wav=The song with which the voice is being synthesized. 
